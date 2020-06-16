@@ -1,0 +1,13 @@
+# Helpful aliases for NeoVim, git, tmux, etc.
+alias nv='nvim'
+alias g='git'
+alias gs='git status'
+alias gr='git pull origin mainline --rebase'
+alias gc='git commit'
+alias ga='git commit --amend --no-edit'
+alias gd='git difftool'
+alias gD='git difftool --cached'
+alias tm='tmux a -t'
+alias c='clear'
+alias so='source ~/.zshrc'
+alias to='cd -P'
