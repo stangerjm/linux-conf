@@ -19,7 +19,7 @@ function config_save () {
 }
 
 function config_vim () {
-  tmux send-keys "nvim ~/.vim/vimrc" C-m
+  tmux send-keys "cd ~/.vim && nvim vimrc" C-m
 }
 
 function setup_split () {
@@ -52,7 +52,7 @@ function setup_split () {
 }
 
 function start_server () {
-  cd_to_sim="cd -P ~/${1}"
+  cd_to_sim="cd -P ${1}"
 
   while true; do
     read "yn?Do you want to start server for ${1}? (y/n): "
@@ -80,12 +80,29 @@ function config_gql () {
 }
 
 function config_simtest () {
-  setup_split "~/$1"
+  while true; do
+    read "location?Where would you like simtest to point to? (1: Assets1, 2: Assets2, 3: Assets3): "
+
+    case $location in
+      [1]) setup_split "~/simt/../SIMTicketingTesting"; break;;
+      [2]) setup_split "~/simt2/../SIMTicketingTesting"; break;;
+      [3]) setup_split "~/simt3/../SIMTicketingTesting"; break;;
+      * ) echo "Please choose 1, 2, or 3.";;
+    esac
+  done
 }
 
 function start_extra () {
-  tmux kill-session -t extra
-  tmux new-session -d -s extra
+  tmux has-session -t=extra 2>/dev/null
+
+  if [ $? != 0 ]
+  then
+    tmux new-session -d -s extra
+  else
+    tmux kill-session -t extra
+    tmux new-session -d -s extra
+  fi
+
   read "location?Where do you want to setup the extra split? [~/]: "
 
   setup_split "$location"
