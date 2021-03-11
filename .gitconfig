@@ -1,0 +1,25 @@
+[user]
+	email = jastange@amazon.com
+	name = James Stanger
+[color]
+	ui = auto
+[core]
+	pager = less -FMRiX
+  editor = nvim
+[push]
+	default = simple
+[alias]
+	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+	plog = log --graph --pretty=format:'%h -%d %s %n' --abbrev-commit --date=relative --branches
+[mergetool]
+	keepBackup = false
+	trustExitCode = true
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false
+	trustExitCode = true
+[diff]
+	tool = nvimdiff
+[difftool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""

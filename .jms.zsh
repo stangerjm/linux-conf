@@ -6,7 +6,7 @@ alias gS='echo "STATUS:" && git status && echo "\nBRANCH:" && git branch && echo
 alias gr='git pull origin mainline --rebase'
 alias gc='git commit'
 alias ga='git commit --amend --no-edit'
-alias gd='git difftool'
+alias gd='git difftool --tool=nvimdiff --no-prompt'
 alias gD='git difftool --cached'
 alias gl='git log'
 alias gb='git branch'
