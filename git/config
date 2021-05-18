@@ -1,0 +1,21 @@
+[user]
+  email = jamesstanger987@gmail.com
+  name = stangerjm
+[color]
+  ui = auto
+[core]
+  editor = nvim
+[mergetool]
+  keepBackup = false
+  trustExitCode = true
+[merge]
+  tool = nvimmerge
+[mergetool "nvimmerge"]
+  cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[difftool]
+  prompt = false
+  trushExitCode = true
+[diff]
+  tool = nvimdiff
+[difftool "nvimdiff"]
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
