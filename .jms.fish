@@ -17,4 +17,4 @@ alias to='cd -P'
 alias vw='python -m http.server 8000'
 
 # Vi mode in Bash
-set -o vi
+fish_vi_key_bindings
