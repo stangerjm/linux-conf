@@ -15,6 +15,7 @@ alias c='clear'
 alias so='source ~/.config/fish/config.fish'
 alias to='cd -P'
 alias vw='python -m http.server 8000'
+alias lg='lazygit'
 
 # Vi mode in Bash
 fish_vi_key_bindings
