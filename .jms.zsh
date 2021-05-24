@@ -15,6 +15,7 @@ alias c='clear'
 alias so='source ~/.zshrc'
 alias to='cd -P'
 alias vw='python -m http.server 8000'
+alias lg='lazygit'
 
 # Vi mode in Bash
 set -o vi

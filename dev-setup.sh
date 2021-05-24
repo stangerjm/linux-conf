@@ -93,6 +93,13 @@ function config_simtest () {
 }
 
 function start_extra () {
+  read "yn?Do you want to set up an extra split? [y/N]: "
+
+  case $yn in
+    y|Y) read "location?Where do you want to setup the extra split? [~/]: ";;
+    *) return;;
+  esac
+
   tmux has-session -t=extra 2>/dev/null
 
   if [ $? != 0 ]
@@ -102,8 +109,6 @@ function start_extra () {
     tmux kill-session -t extra
     tmux new-session -d -s extra
   fi
-
-  read "location?Where do you want to setup the extra split? [~/]: "
 
   setup_split "$location"
 }
