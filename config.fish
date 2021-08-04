@@ -23,6 +23,9 @@ alias bbb='brc --allPackages brazil-build'
 alias bbra='bbr apollo-pkg'
 alias ls='exa -l -g --icons'
 
+# Ensure colors work as expected
+set -x TERM screen-256color
+
 set -x PATH $PATH /apollo/env/NodeJS/bin
 set -x PATH $PATH /home/jastange/.rbenv/bin
 set -x PATH $PATH /local/home/jastange/.rbenv/versions/2.5.8/bin
