@@ -33,6 +33,9 @@ set -x PATH $PATH /apollo/env/RubyEnv/bin
 set -x PATH $PATH /workplace/jastange/sigv4curl/env/sigv4curl-1.0/runtime/bin
 set -x PATH $HOME/.toolbox/bin $PATH
 set -x PATH $HOME/.local/bin $PATH
+set -x PATH $HOME/.npm/bin $PATH
 set -x PATH /apollo/env/BarkCLI/bin $PATH
 set -x PATH /apollo/env/envImprovement/bin $PATH
 set -x PATH /apollo/env/SDETools/bin $PATH
+
+npm config set prefix ~/.npm
