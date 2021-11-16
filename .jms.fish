@@ -19,3 +19,4 @@ alias lg='lazygit'
 
 # Vi mode in Bash
 fish_vi_key_bindings
+bind -M insert \t accept-autosuggestion
