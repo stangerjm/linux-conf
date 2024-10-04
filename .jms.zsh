@@ -16,6 +16,7 @@ alias to='cd -P'
 alias vw='python -m http.server 8000'
 alias lg='lazygit'
 alias ls='exa -l -g --icons'
+alias mwcurl='curl --location-trusted --negotiate -u : -b ~/.midway/cookie -c ~/.midway/cookie'
 
 # Vi mode in Bash
 set -o vi
