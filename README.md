@@ -7,3 +7,4 @@
 
 ## Preferred tools
 * [powerlevel10k theme](https://github.com/romkatv/powerlevel10k)
+* [zsh-syntax-hightlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
