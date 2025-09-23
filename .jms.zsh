@@ -20,3 +20,6 @@ alias mwcurl='curl --location-trusted --negotiate -u : -b ~/.midway/cookie -c ~/
 
 # Vi mode in Bash
 set -o vi
+
+# Set Neovim as default editor
+export EDITOR='nvim'
