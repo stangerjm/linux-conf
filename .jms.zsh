@@ -13,9 +13,8 @@ alias gb='git branch'
 alias tm='tmux a -t'
 alias so='source ~/.zshrc'
 alias to='cd -P'
-alias vw='python -m http.server 8000'
-alias lg='lazygit'
-alias ls='eza -l -g --icons'
+alias vw='python3 -m http.server 8000'
+alias ls='eza --icons -l -g'
 alias mwcurl='curl --location-trusted --negotiate -u : -b ~/.midway/cookie -c ~/.midway/cookie'
 
 # Vi mode in Bash
@@ -23,3 +22,5 @@ set -o vi
 
 # Set Neovim as default editor
 export EDITOR='nvim'
+
+source <(fzf --zsh)
