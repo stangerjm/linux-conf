@@ -18,13 +18,21 @@ git clone https://github.com/stangerjm/titanium.nvim.git ~/.config/nvim
 brew bundle --file=~/linux-conf/Brewfile
 ```
 
-### 4. Install Oh My ZSH + Powerlevel10k
+### 4. Install Oh My ZSH + plugins + theme
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-### 5. Install Neovim LSP dependencies
+### 5. Install Node via NVM
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+source ~/.zshrc
+nvm install 20
+```
+
+### 6. Install Neovim LSP dependencies
 ```bash
 npm install -g typescript typescript-language-server @vue/language-server @vue/typescript-plugin eslint_d vscode-langservers-extracted@4.8.0 neovim
 ```
@@ -33,13 +41,15 @@ npm install -g typescript typescript-language-server @vue/language-server @vue/t
 
 Via `Brewfile`:
 * [Neovim](https://github.com/neovim/neovim)
-* [Node.js 20](https://nodejs.org/)
 * [eza](https://github.com/eza-community/eza)
 * [fzf](https://github.com/junegunn/fzf)
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
-* [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 * [lua-language-server](https://github.com/LuaLS/lua-language-server)
 
-Installed separately:
+Via Oh My ZSH:
 * [oh-my-zsh](https://ohmyz.sh/)
 * [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+* [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+Via NVM:
+* [Node.js 20](https://nodejs.org/)

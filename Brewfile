@@ -1,7 +1,5 @@
 brew "neovim"
-brew "node@20"
 brew "eza"
 brew "fzf"
 brew "ripgrep"
-brew "zsh-syntax-highlighting"
 brew "lua-language-server"
